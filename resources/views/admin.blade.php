@@ -27,7 +27,7 @@
               <div class="d-flex justify-content-center py-4">
                 <a href="#" class="logo d-flex align-items-center w-auto">
                   <img src="./assets/img/logo.jpg" alt=""> <i class="fas fa-lightbulb" style="color: #FD7E14;font-size:45px;"></i> 
-                  <span class="d-none d-lg-block" style="font-family: 'Poppins', sans-serif;"> Led-Industrie</span>
+                  <span class="d-none d-lg-block" style="font-family: 'Poppins', sans-serif;"> Led-Industrie=</span>
                 </a>
               </div>
 

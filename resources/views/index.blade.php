@@ -34,8 +34,8 @@
             <div class="d-none d-lg-flex social-links align-items-center">
                 <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
                 <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-moon"></i></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-moon"></i></a>
             </div>
         </div>
     </div>
@@ -43,27 +43,23 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
-
-            <h1 class="logo me-auto">
+            <h1 class="logo me-auto" style="font-size: 20px;">
                 <a href="index.html">
-                    <i class="fas fa-lightbulb" style="color: #FD7E14;"></i> Led-Industrie
+                    <i class="fas fa-lightbulb" style="color: #FD7E14;"></i> Led-Solutions Madagascar
                 </a>
             </h1>
-
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Acceuil</a></li>
-                    <li><a class="nav-link scrollto" href="#why-us">A propos</a></li>
+                    <li><a class="nav-link scrollto active" href="#hero">Accueil</a></li>
+                    <li><a class="nav-link scrollto" href="#why-us">À propos</a></li>
                     <li><a class="nav-link scrollto" href="#services">Services</a></li>
                     <li><a class="nav-link scrollto" href="#produits">Produits</a></li>
-                    <li><a class="nav-link scrollto" href="#portfolio">Gallérie</a></li>
+                    <li><a class="nav-link scrollto" href="#portfolio">Galerie</a></li>
                     <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- navbar -->
-
-            <a href="#contact" class="appointment-btn scrollto"><span class="d-none d-md-inline">Contact</a>
-
+            </nav>
+            <a href="#contact" class="appointment-btn scrollto"><span class="d-none d-md-inline">Contact</span></a>
         </div>
     </header><!-- End Header -->
 
@@ -84,18 +80,11 @@
         <!-- ======= Why Us Section ======= -->
         <section id="why-us" class="why-us" data-aos="fade-up" data-aos-duration="1500">
             <div class="container">
-
                 <div class="row">
                     <div class="col-lg-4 d-flex align-items-stretch">
                         <div class="content" style="background-color: gray;">
-                            <h3 style="background: linear-gradient(to right, #FD7E14, #FFD700);
-                            -webkit-background-clip: text;
-                            color: transparent;">Pourquoi choisir Led Industrie?</h3>
-                            <p style="opacity: 0.8;">
-                                Chez Led Industrie Madagascar, nous sommes déterminés à fournir les solutions
-                                d'éclairage les plus avancées pour répondre aux besoins de nos clients. En tant que
-                                leader dans l'industrie des LED à Madagascar.
-                            </p>
+                            <h3 style="background: linear-gradient(to right, #FD7E14, #FFD700); -webkit-background-clip: text; color: transparent;">Pourquoi choisir Led Industrie?</h3>
+                            <p style="opacity: 0.8;">Chez Led Industrie Madagascar, nous sommes déterminés à fournir les solutions d'éclairage les plus avancées pour répondre aux besoins de nos clients. En tant que leader dans l'industrie des LED à Madagascar.</p>
                             <div class="text-center">
                                 <a href="#lire-plus" class="more-btn">Lire plus <i class="bx bx-chevron-right"></i></a>
                             </div>
@@ -108,25 +97,21 @@
                                     <div class="icon-box mt-4 mt-xl-0">
                                         <i class="fas fa-comments" style="color: #FD7E14;"></i>
                                         <h4>Conseil et Consultation</h4>
-                                        <p>Nos experts en éclairage sont là pour vous aider à trouver les meilleures
-                                            solutions LED pour votre projet.</p>
+                                        <p>Nos experts en éclairage sont là pour vous aider à trouver les meilleures solutions LED pour votre projet.</p>
                                     </div>
                                 </div>
                                 <div class="col-xl-4 d-flex align-items-stretch">
                                     <div class="icon-box mt-4 mt-xl-0">
                                         <i class="fas fa-pencil-alt" style="color: #FD7E14;"></i>
                                         <h4>Conception sur mesure</h4>
-                                        <p>Nous proposons des services de conception sur mesure pour créer des solutions
-                                            d'éclairage uniques.
-                                        </p>
+                                        <p>Nous proposons des services de conception sur mesure pour créer des solutions d'éclairage uniques.</p>
                                     </div>
                                 </div>
                                 <div class="col-xl-4 d-flex align-items-stretch">
                                     <div class="icon-box mt-4 mt-xl-0">
                                         <i class="fas fa-wrench" style="color: #FD7E14;"></i>
-                                        <h4> Installation et Maintenance</h4>
-                                        <p>Notre équipe d'installation professionnelle assure une mise en place sans
-                                            tracas de vos systèmes d'éclairage LED.</p>
+                                        <h4>Installation et Maintenance</h4>
+                                        <p>Notre équipe d'installation professionnelle assure une mise en place sans tracas de vos systèmes d'éclairage LED.</p>
                                     </div>
                                 </div>
                             </div>
@@ -136,128 +121,35 @@
             </div>
         </section><!-- End Why Us Section -->
 
-        <!-- ======= About Section ======= -->
-        <section id="lire-plus" class="about">
-            <div class="container-fluid">
-
-                <div class="row">
-                    <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
-                        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>
-                    </div>
-
-                    <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-                        <h3 style="color: gray;">
-                            Led Industrie est une entreprise spécialisée dans la production, la distribution et
-                            l'installation de solutions d'éclairage LED.</h3>
-                        <p>Voici quelques aspects qui pourraient être pertinents pour décrire l'entreprise :</p>
-
-                        <div class="icon-box">
-                            <div class="icon" style="background: linear-gradient(to right, #FD7E14, #FFD700);"><i class="fa fa-gem" style="color: #ffffff;"></i></div>
-                            <h4 class="title"><a href="">Produits de haute qualité</a></h4>
-                            <p class="description"> Led Industrie propose une large gamme de produits d'éclairage LED de
-                                haute qualité, respectant les normes les plus élevées de qualité et de fiabilité.</p>
-                        </div>
-
-                        <div class="icon-box">
-                            <div class="icon" style="background: linear-gradient(to right, #FD7E14, #FFD700);"><i class="fa fa-bolt" style="color: #ffffff;"></i></div>
-                            <h4 class="title"><a href="">Économies d'énergie</a></h4>
-                            <p class="description">Les produits LED sont reconnus pour leur efficacité énergétique,
-                                permettant aux clients de réaliser des économies sur leurs coûts énergétiques tout en
-                                bénéficiant d'un éclairage performant.
-                            </p>
-                        </div>
-
-                        <div class="icon-box">
-                            <div class="icon" style="background: linear-gradient(to right, #FD7E14, #FFD700);"><i class="fa fa-comments" style="color: #ffffff;"></i></div>
-                            <h4 class="title"><a href="">Service client de qualité :</a></h4>
-                            <p class="description">Led Industrie met l'accent sur la satisfaction de ses clients en
-                                offrant un excellent service après-vente et en étant à l'écoute des besoins et des
-                                préoccupations de ses clients.</p>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </section><!-- End About Section -->
-
-        <!-- ======= Services Section ======= -->
-        <section id="services" class="services" style="background-color: #f1f7fd;">
-            <div class="container">
-
-                <div class="section-title" data-aos="fade-up">
-                    <h2>Services</h2>
-                    <p>Led Industrie propose une gamme de services destinés à satisfaire les besoins de ses clients en
-                        matière d'éclairage LED.</p>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                            <div class="icon" style="background: linear-gradient(to right,#FFD700, #FD7E14);"><i class="fa fa-lightbulb"></i></div>
-                            <h4 class="title"><a href="">Conseil personnalisé</a></h4>
-                            <p class="description">Led Industrie offre des services de conseil pour aider les clients à
-                                choisir les solutions d'éclairage les plus adaptées à leurs besoins spécifiques. Les
-                                experts de l'entreprise peuvent évaluer les espaces et proposer des produits qui
-                                optimisent l'éclairage tout en minimisant la consommation d'énergie.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                        <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-                            <div class="icon" style="background: linear-gradient(to right,#FFD700, #FD7E14);"><i class="fa fa-shopping-bag"></i></div>
-                            <h4 class="title"><a href="">Vente de produits d'éclairage LED</a></h4>
-                            <p class="description"> L'entreprise propose une large gamme de produits d'éclairage LED,
-                                notamment des ampoules, des projecteurs, des rubans lumineux, des panneaux, des
-                                luminaires, etc. Les clients peuvent trouver des solutions pour tous types
-                                d'applications, qu'il s'agisse de besoins résidentiels, commerciaux ou industriels.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                        <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-                            <div class="icon" style="background: linear-gradient(to right,#FFD700, #FD7E14);"><i class="fa fa-cog"></i></div>
-                            <h4 class="title"><a href="">Installation et mise en service</a></h4>
-                            <p class="description">Led Industrie propose des services d'installation professionnelle
-                                pour s'assurer que les produits sont correctement installés et configurés pour un
-                                fonctionnement optimal. L'entreprise peut prendre en charge l'installation complète des
-                                systèmes d'éclairage LED.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                        <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-                            <div class="icon" style="background: linear-gradient(to right,#FFD700, #FD7E14);"><i class="fa fa-tools"></i></div>
-                            <h4 class="title"><a href="">Maintenance et support technique</a></h4>
-                            <p class="description">Pour assurer la durabilité des installations d'éclairage, Led
-                                Industrie offre des services de maintenance et de support technique. L'entreprise peut
-                                intervenir rapidement pour résoudre tout problème lié à l'éclairage LED.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!-- End Services Section -->
-
-        <section id="produits"> <!-- Section Produits -->
-            <div class="container" data-aos="fade-up" data-aos-duration="1500">
+        <!-- ======= Produits ======= -->
+        <section id="boutons-stylés" style="background-color: #f8f9fa;">
+            <div class="container text-center py-5">
                 <div class="section-title">
-                    <h2>Nos Produits
-                    </h2>
-                    <p>Nos produits LED sont fabriqués selon les normes les plus élevées de qualité et de fiabilité.</p>
+                    <h2>Nos Produits</h2>
                 </div>
-                <div class="header-search-container">
-                    <header class="section-header">
-                        <h2>Parcourez les photos , passez vos commandes </h2>
-                    </header>
-
-                    <div class="search-bar-container">
-                        <div class="search-bar-wrapper">
-                            <input type="text" id="search-bar" class="search-bar" placeholder="Search..." />
-                            <span class="search-icon">
-                                <i class="fas fa-search"></i>
-                            </span>
-                        </div>
+                <div class="row justify-content-center mt-4">
+                    <div class="col-lg-2 col-md-3">
+                        <button type="button" class="btn btn-primary btn-block mb-3 filter-btn" data-filter="all">ALL</button>
                     </div>
+                    <div class="col-lg-2 col-md-3">
+                        <button type="button" class="btn btn-primary btn-block mb-3">Éclairage intérieur</button>
+                    </div>
+                    <div class="col-lg-2 col-md-3">
+                        <button type="button" class="btn btn-primary btn-block mb-3">Éclairage extérieur</button>
+                    </div>
+                    <div class="col-lg-2 col-md-3">
+                        <button type="button" class="btn btn-primary btn-block mb-3">Jardins/Piscine</button>
+                    </div>
+                    <div class="col-lg-2 col-md-3">
+                        <button type="button" class="btn btn-primary btn-block mb-3">Décorations</button>
+                    </div>
+                    <div class="col-lg-2 col-md-3">
+                        <button type="button" class="btn btn-primary btn-block mb-3">Divers</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container" data-aos="fade-up" data-aos-duration="1500">
+                <div class="header-search-container">
                 </div>
 
                 <div class="swiper-slide swiper-slide-mobile">
@@ -395,6 +287,110 @@
                     <button style="background-color: #3b5998; color: white; border-radius: 5px; transition: background-color 0.3s; border: none;" onclick="window.open('https://www.facebook.com/VotrePageFacebook', '_blank')"><i class="fab fa-facebook"></i> Facebook</button>
                 </div>
         </section>
+
+        <!-- ======= About Section ======= -->
+        <section id="lire-plus" class="about">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
+                        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>
+                    </div>
+
+                    <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+                        <h3 style="color: gray;">
+                            Led Industrie est une entreprise spécialisée dans la production, la distribution et
+                            l'installation de solutions d'éclairage LED.</h3>
+                        <p>Voici quelques aspects qui pourraient être pertinents pour décrire l'entreprise :</p>
+
+                        <div class="icon-box">
+                            <div class="icon" style="background: linear-gradient(to right, #FD7E14, #FFD700);"><i class="fa fa-gem" style="color: #ffffff;"></i></div>
+                            <h4 class="title"><a href="">Produits de haute qualité</a></h4>
+                            <p class="description"> Led Industrie propose une large gamme de produits d'éclairage LED de
+                                haute qualité, respectant les normes les plus élevées de qualité et de fiabilité.</p>
+                        </div>
+
+                        <div class="icon-box">
+                            <div class="icon" style="background: linear-gradient(to right, #FD7E14, #FFD700);"><i class="fa fa-bolt" style="color: #ffffff;"></i></div>
+                            <h4 class="title"><a href="">Économies d'énergie</a></h4>
+                            <p class="description">Les produits LED sont reconnus pour leur efficacité énergétique,
+                                permettant aux clients de réaliser des économies sur leurs coûts énergétiques tout en
+                                bénéficiant d'un éclairage performant.
+                            </p>
+                        </div>
+
+                        <div class="icon-box">
+                            <div class="icon" style="background: linear-gradient(to right, #FD7E14, #FFD700);"><i class="fa fa-comments" style="color: #ffffff;"></i></div>
+                            <h4 class="title"><a href="">Service client de qualité :</a></h4>
+                            <p class="description">Led Industrie met l'accent sur la satisfaction de ses clients en
+                                offrant un excellent service après-vente et en étant à l'écoute des besoins et des
+                                préoccupations de ses clients.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Section -->
+
+        <!-- ======= Services Section ======= -->
+        <section id="services" class="services" style="background-color: #f1f7fd;">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Services</h2>
+                    <p>Led Industrie propose une gamme de services destinés à satisfaire les besoins de ses clients en
+                        matière d'éclairage LED.</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                            <div class="icon" style="background: linear-gradient(to right,#FFD700, #FD7E14);"><i class="fa fa-lightbulb"></i></div>
+                            <h4 class="title"><a href="">Conseil personnalisé</a></h4>
+                            <p class="description">Led Industrie offre des services de conseil pour aider les clients à
+                                choisir les solutions d'éclairage les plus adaptées à leurs besoins spécifiques. Les
+                                experts de l'entreprise peuvent évaluer les espaces et proposer des produits qui
+                                optimisent l'éclairage tout en minimisant la consommation d'énergie.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                            <div class="icon" style="background: linear-gradient(to right,#FFD700, #FD7E14);"><i class="fa fa-shopping-bag"></i></div>
+                            <h4 class="title"><a href="">Vente de produits d'éclairage LED</a></h4>
+                            <p class="description"> L'entreprise propose une large gamme de produits d'éclairage LED,
+                                notamment des ampoules, des projecteurs, des rubans lumineux, des panneaux, des
+                                luminaires, etc. Les clients peuvent trouver des solutions pour tous types
+                                d'applications, qu'il s'agisse de besoins résidentiels, commerciaux ou industriels.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                            <div class="icon" style="background: linear-gradient(to right,#FFD700, #FD7E14);"><i class="fa fa-cog"></i></div>
+                            <h4 class="title"><a href="">Installation et mise en service</a></h4>
+                            <p class="description">Led Industrie propose des services d'installation professionnelle
+                                pour s'assurer que les produits sont correctement installés et configurés pour un
+                                fonctionnement optimal. L'entreprise peut prendre en charge l'installation complète des
+                                systèmes d'éclairage LED.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                            <div class="icon" style="background: linear-gradient(to right,#FFD700, #FD7E14);"><i class="fa fa-tools"></i></div>
+                            <h4 class="title"><a href="">Maintenance et support technique</a></h4>
+                            <p class="description">Pour assurer la durabilité des installations d'éclairage, Led
+                                Industrie offre des services de maintenance et de support technique. L'entreprise peut
+                                intervenir rapidement pour résoudre tout problème lié à l'éclairage LED.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Services Section -->
+
+
         <style>
             #particles-js {
                 position: absolute;
@@ -758,7 +754,7 @@
             });
         });
     </script>
-    
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="{{ asset('js/particle.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
