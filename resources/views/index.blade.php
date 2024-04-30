@@ -23,7 +23,6 @@
 </head>
 
 <body>
-
     <!-- ======= Top Bar ======= -->
     <div id="topbar" class="d-flex align-items-center fixed-top">
         <div class="container d-flex justify-content-between">
@@ -69,7 +68,7 @@
             <source src="{{ asset('videos/intro.mp4') }}" type="video/mp4">
         </video>
         <div class="container">
-            <h1 data-aos="fade-left" data-aos-duration="1500" style="color: rgb(72, 70, 70)">Led Industrie Madagascar</h1>
+            <h1 data-aos="fade-left" data-aos-duration="1500" style="color: rgb(72, 70, 70)">Led-Solutions Madagascar</h1>
             <h2 data-aos="fade-right" data-aos-duration="1500" style="color: rgb(72, 70, 70)">Éclairons votre monde avec l'innovation LED</h2>
             <a href="#why-us" class="btn-get-started scrollto" style="background: linear-gradient(to right, #FD7E14, #FFD700);">En savoir plus</a>
         </div>
@@ -411,72 +410,14 @@
         <section id="portfolio" class="portfolio">
             <div class="container">
                 <div class="section-title" data-aos="fade-up">
-                    <h2>Gallérie</h2>
+                    <h2>Galerie</h2>
                     <p>Découvrez notre expertise en matière d'éclairage LED à travers une sélection de nos réalisations
                         les plus marquantes.</p>
                 </div>
 
+
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('img/Gallerie/1.gif') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Éclairage de jardin luxueux</h4>
-                                <p>LedIndustrie</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('img/Gallerie/2.jpg') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Éclairage intérieur moderne</h4>
-                                <p>LedIndustrie</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('img/Gallerie/3.webp') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Éclairage de magasin</h4>
-                                <p>LedIndustrie</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('img/Gallerie/4.jpg') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Éclairage de bureau</h4>
-                                <p>LedIndustrie</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('img/Gallerie/5.webp') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Éclairage architectural</h4>
-                                <p>LedIndustrie</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('img/Gallerie/6.jpg') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Éclairage industriel</h4>
-                                <p>LedIndustrie</p>
-                            </div>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
         </section><!-- End Gallerie Section -->
@@ -633,7 +574,7 @@
                 <div class="row">
 
                     <div class="col-lg-3 col-md-6 footer-contact">
-                        <h3 class="logo me-auto" style="color: gary;"><i class="fas fa-lightbulb" style="color: #FD7E14;"></i> <a href="index.html" style="color: rgb(72, 70, 70);">Led-Industrie</a></h3>
+                        <h3 class="logo me-auto" style="color: gary;"><i class="fas fa-lightbulb" style="color: #FD7E14;"></i> <a href="index.html" style="color: rgb(72, 70, 70);">Led-Solutions Madagascar</a></h3>
                         <p>
                             Ambohimanarina , Antananarivo<br>
                             Madagascar <br><br>
@@ -687,7 +628,7 @@
 
             <div class="me-md-auto text-center text-md-start">
                 <div class="copyright">
-                    &copy; Copyright <strong><span>Led-Industrie</span></strong>. Tous droits réservés.
+                    &copy; Copyright <strong><span>Led-Solutions Madagascar</span></strong>. Tous droits réservés.
                 </div>
                 <div class="credits">
                     By <a href="https://www.g-tec.mg/">G-Tec Madagascar</a>

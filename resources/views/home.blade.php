@@ -117,11 +117,87 @@
                 </div>
             </div>
         </section>
+        <!-- Section Galerie d'images -->
+        <section>
+            <div class="container">
+                <div class="row justify-content-center mb-4">
+                    <div class="col-md-6 text-center">
+                        <h3>Gestion Galerie</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Formulaire pour ajouter une nouvelle image -->
+                        <form id="imageForm" action="{{ route('images.store') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <div class="mb-3">
+                                <label for="image_name" class="form-label">Nom de l'image :</label>
+                                <input type="text" class="form-control" id="image_name" name="image_name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Description de l'image :</label>
+                                <textarea class="form-control" id="description" name="description"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="image" class="form-label">Sélectionner une image :</label>
+                                <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Ajouter</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main><!-- End #main -->
-
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('imageForm').addEventListener('submit', function(e) {
+                e.preventDefault(); // Empêcher le rechargement de la page
+
+                // Récupérer les données du formulaire
+                let formData = new FormData(this);
+
+                // Envoyer les données via AJAX
+                fetch(this.action, {
+                        method: this.method,
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        // Afficher une alerte SweetAlert si l'ajout est réussi
+                        if (data.success) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Image ajoutée avec succès!',
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                            // Réinitialiser le formulaire après un ajout réussi
+                            this.reset();
+                        } else {
+                            // Afficher une alerte SweetAlert en cas d'échec
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Erreur lors de l\'ajout de l\'image!',
+                                text: 'Veuillez réessayer ou contacter l\'administrateur.'
+                            });
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Erreur:', error);
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Erreur',
+                            text: 'Une erreur s\'est produite lors de l\'ajout de l\'image.'
+                        });
+                    });
+            });
+        });
+    </script>
     <script src="{{ asset('js/side.js') }}"></script>
 
 </body>
