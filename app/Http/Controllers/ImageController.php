@@ -12,7 +12,6 @@ class ImageController extends Controller
         $images = Image::select('id', 'name', 'description')->get();
         return view('home', ['images' => $images]);
     }
-
     public function store(Request $request)
     {
         $request->validate([

@@ -5,15 +5,9 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Components / Accordion - NiceAdmin Bootstrap Template</title>
+    <title>Led-Solutions Madagascar - Admin</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
-
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="{{ asset('includes/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('includes/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
@@ -32,15 +26,28 @@
         <div class="d-flex align-items-center justify-content-between">
             <a href="" class="logo d-flex align-items-center">
                 <i class="fas fa-lightbulb" style="color: #FD7E14; font-size:30px;"></i>
-                <span class="d-none d-lg-block" style="color: gray"> Led-Solutions</span>
+                <span class="d-none d-lg-block" style="color: gray; font-size:23.5px;">Admin Led-Solutions</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
 
 
         <nav class="header-nav ms-auto">
-
-        </nav><!-- End Icons Navigation -->
+            @auth
+            <div class="dropdown">
+                <div id="userDropdown" class="user-dropdown">
+                    <span><i class="fas fa-user"></i> {{ Auth::user()->name }}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div id="dropdownContent" class="dropdown-content">
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </div>
+            </div>
+            @endauth
+        </nav>
 
     </header><!-- End Header -->
 
@@ -86,64 +93,155 @@
     <main id="main" class="main">
         <section>
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Messages Reçus</h5>
-                                <div class="table-responsive">
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Nom</th>
-                                                <th>Email</th>
-                                                <th>Message</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach ($messages as $message)
-                                            <tr>
-                                                <td>{{ $message->name }}</td>
-                                                <td>{{ $message->email }}</td>
-                                                <td>{{ $message->message }}</td>
-                                            </tr>
-                                            @endforeach
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <h3 style="text-align: center;">Liste des Messages Reçus</h3>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th><i class="fas fa-user"></i> Nom</th>
+                                <th><i class="fas fa-envelope"></i> Email</th>
+                                <th><i class="fas fa-comment"></i> Message</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($messages as $message)
+                            <tr>
+                                <td>{{ $message->name }}</td>
+                                <td>{{ $message->email }}</td>
+                                <td>{{ $message->message }}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
+        <br> <br>
         <!-- Section Galerie d'images -->
         <section>
             <div class="container">
                 <div class="row justify-content-center mb-4">
                     <div class="col-md-6 text-center">
-                        <h3>Gestion Galerie</h3>
+                        <h3><i class="fas fa-images"></i> Gestion Galerie</h3>
                     </div>
                 </div>
+
                 <div class="row">
+                    <!-- Colonne pour le formulaire d'ajout d'image -->
                     <div class="col-md-6">
-                        <!-- Formulaire pour ajouter une nouvelle image -->
                         <form id="imageForm" action="{{ route('images.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
-                                <label for="image_name" class="form-label">Nom de l'image :</label>
+                                <label for="image_name" class="form-label"><i class="fas fa-file-image"></i> Nom de l'image :</label>
                                 <input type="text" class="form-control" id="image_name" name="image_name" required>
                             </div>
                             <div class="mb-3">
-                                <label for="description" class="form-label">Description de l'image :</label>
+                                <label for="description" class="form-label"><i class="fas fa-align-left"></i> Description de l'image :</label>
                                 <textarea class="form-control" id="description" name="description"></textarea>
                             </div>
                             <div class="mb-3">
-                                <label for="image" class="form-label">Sélectionner une image :</label>
+                                <label for="image" class="form-label"><i class="fas fa-image"></i> Sélectionner une image :</label>
                                 <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
                             </div>
-                            <button type="submit" class="btn btn-primary">Ajouter</button>
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i> Ajouter</button>
                         </form>
+                    </div>
+
+                    <!-- Colonne pour la liste des images -->
+                    <div class="col-md-6">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nom</th>
+                                    <th>Description</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($images as $image)
+                                <tr>
+                                    <td>{{ $image->id }}</td>
+                                    <td>{{ $image->name }}</td>
+                                    <td>{{ $image->description }}</td>
+                                    <td>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <!-- Bouton Supprimer -->
+                                            <form action="">
+                                                <button type="submit" class="btn btn-danger me-2 btn-sm">
+                                                    <i class="fas fa-trash-alt"></i> <!-- Icône pour supprimer -->
+                                                </button>
+                                            </form>
+
+                                            <!-- Bouton Mettre à Jour -->
+                                            <a href="" class="btn btn-primary btn-sm">
+                                                <i class="fas fa-edit"></i> <!-- Icône pour mettre à jour -->
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br> <br>
+        <section>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <h3 style="text-align:center"><i class="fas fa-info-circle"></i> Informations de Led Solutions Madagascar</h3>
+
+                    <!-- Première colonne -->
+                    <div class="col-md-6">
+                        <!-- Formulaire pour ajouter les informations -->
+                        <form action="{{ route('store.information') }}" method="POST">
+                            @csrf
+                            <div class="mb-3">
+                                <label for="email" class="form-label"><i class="fas fa-envelope"></i> E-mail :</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label"><i class="fas fa-phone"></i> Numéro de Téléphone :</label>
+                                <input type="text" class="form-control" id="phone" name="phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="address" class="form-label"><i class="fas fa-map-marker-alt"></i> Adresse :</label>
+                                <textarea class="form-control" id="address" name="address" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-plus-circle"></i> Ajouter Informations</button>
+                        </form>
+                    </div>
+
+                    <!-- Deuxième colonne -->
+                    <div class="col-md-6">
+                        <!-- Contenu pour la deuxième colonne -->
+                        <div class="table-responsive">
+                            <h4 style="text-align: center;"><i class="fas fa-info-circle"></i> Infos du Société</h4>
+                            <table class="table table-bordered">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th scope="col">E-mail</th>
+                                        <th scope="col">Téléphone</th>
+                                        <th scope="col">Adresse</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($informations as $info)
+                                    <tr>
+                                        <td><i class="fas fa-envelope"></i> {{ $info->email }}</td>
+                                        <td><i class="fas fa-phone"></i> {{ $info->phone }}</td>
+                                        <td><i class="fas fa-map-marker-alt"></i> {{ $info->address }}</td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button class="btn btn-danger btn-sm me-2"><i class="fas fa-trash"></i> Supprimer</button>
+                            <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Mettre à jour</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -152,6 +250,12 @@
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+    <script>
+        // Optionnel: Gestion de l'affichage du dropdown en JavaScript
+        document.getElementById("userDropdown").addEventListener("click", function() {
+            document.getElementById("dropdownContent").style.display = "block";
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
