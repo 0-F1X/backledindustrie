@@ -27,9 +27,12 @@
     <div id="topbar" class="d-flex align-items-center fixed-top">
         <div class="container d-flex justify-content-between">
             <div class="contact-info d-flex align-items-center">
-                <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">ledindustrie-mada@gmail.com</a>
-                <i class="bi bi-phone"></i> +261 34 91 776 38
+                <div class="contact-info d-flex align-items-center">
+                    <i class="bi bi-envelope"></i> <a href="mailto:{{ $information->email }}">{{ $information->email }}</a>
+                    <i class="bi bi-phone"></i> {{ $information->phone }}
+                </div>
             </div>
+
             <div class="d-none d-lg-flex social-links align-items-center">
                 <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
                 <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
@@ -417,7 +420,7 @@
 
 
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
-                   
+                    
                 </div>
             </div>
         </section><!-- End Gallerie Section -->
@@ -576,10 +579,10 @@
                     <div class="col-lg-3 col-md-6 footer-contact">
                         <h3 class="logo me-auto" style="color: gary;"><i class="fas fa-lightbulb" style="color: #FD7E14;"></i> <a href="index.html" style="color: rgb(72, 70, 70);">Led-Solutions Madagascar</a></h3>
                         <p>
-                            Ambohimanarina , Antananarivo<br>
+                            {{ $information->address }}<br>
                             Madagascar <br><br>
-                            <strong>Téléphone:</strong> +261 34 91 776 38<br>
-                            <strong>Email:</strong> ledindustrie-mada@gmail.com<br>
+                            <strong>Téléphone:</strong> {{ $information->phone }}<br>
+                            <strong>Email:</strong> {{ $information->email }}<br>
                         </p>
                     </div>
 
@@ -609,15 +612,6 @@
                         <h4>Qu'attendez vous ? </h4>
                         <p>Led Industrie est votre partenaire de confiance pour des solutions d'éclairage LED innovantes
                             et de qualité, adaptées à tous vos besoins.</p>
-                        <form action="" method="post">
-                            <style>
-                                input:focus {
-                                    border: none;
-                                    outline: none;
-                                }
-                            </style>
-                            <input type="email" name="email"><input type="submit" value="Subscribe">
-                        </form>
                     </div>
 
                 </div>

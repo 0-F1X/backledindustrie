@@ -5,17 +5,7 @@ use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\LoginController;
-
-// Page d'accueil
-Route::get('/', function () {
-    return view('index');
-});
-
-// Vue admin
-Route::get('/admin', function () {
-    return view('admin');
-});
+use App\Http\Controllers\InformationController;
 
 // Envoyer un message
 Route::post('/envoyer-message', [MessageController::class, 'store'])->name('envoyer.message');
@@ -37,5 +27,4 @@ Route::prefix('admin')->group(function () {
 // Définir une route distincte pour charger les messages
 Route::get('/messages', [MessageController::class, 'showMessages'])->name('messages');
 
-// Infos
-Route::post('/store-information', [HomeController::class, 'storeInformation'])->name('store.information');
+Route::get('/', [InformationController::class, 'index'])->name('information.index');
