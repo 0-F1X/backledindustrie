@@ -25,8 +25,6 @@ Route::prefix('admin')->group(function () {
 });
 
 // Définir une route distincte pour charger les messages
-Route::get('/', [MessageController::class, 'showMessages'])->name('messages');
+Route::get('/messages', [MessageController::class, 'showMessages'])->name('messages');
 
 Route::get('/', [InformationController::class, 'index'])->name('information.index');
-
-Route::post('/store-information', [HomeController::class, 'storeInformation'])->name('store.information');
