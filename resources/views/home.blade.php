@@ -196,7 +196,7 @@
                     <!-- Première colonne -->
                     <div class="col-md-6">
                         <!-- Formulaire pour ajouter les informations -->
-                        <form action="{{ route('store.information') }}" method="POST">
+                        <form action= method="POST">
                             @csrf
                             <div class="mb-3">
                                 <label for="email" class="form-label"><i class="fas fa-envelope"></i> E-mail :</label>
