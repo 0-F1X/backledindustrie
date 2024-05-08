@@ -1,22 +1,25 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Message; // Assurez-vous d'importer le modèle Message
+use App\Models\Message;
 
 class MessageController extends Controller
 {
-    // Autres méthodes du contrôleur...
-
     public function store(Request $request)
     {
-        // Valider les données du formulaire
+        // Valider les données du formulaire avec des regex
         $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => [
+                'required',
+                'string',
+                'max:255',
+                'regex:/^(?!\s+$)[a-zA-Z\s]+$/'
+            ],
             'email' => 'required|email|max:255',
             'message' => 'required|string',
         ]);
+        
 
         // Créer une nouvelle instance de Message avec les données du formulaire
         $message = new Message();
@@ -27,7 +30,7 @@ class MessageController extends Controller
         // Enregistrer le message dans la base de données
         $message->save();
 
-        // Rediriger l'utilisateur vers une autre page ou afficher un message de succès
+        // Rediriger l'utilisateur avec un message de succès
         return redirect()->back()->with('success', 'Votre message a été envoyé avec succès !');
     }
 

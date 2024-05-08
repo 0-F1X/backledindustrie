@@ -28,3 +28,5 @@ Route::prefix('admin')->group(function () {
 Route::get('/messages', [MessageController::class, 'showMessages'])->name('messages');
 
 Route::get('/', [InformationController::class, 'index'])->name('information.index');
+
+Route::post('/store-information', [InformationController::class, 'store'])->name('information.store');

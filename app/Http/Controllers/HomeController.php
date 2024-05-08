@@ -21,21 +21,4 @@ class HomeController extends Controller
         $informations = Information::all(); // Récupérer toutes les infos
         return view('home', compact('messages', 'images' , 'informations'));
     } 
-
-    public function storeInformation(Request $request)
-    {
-        $validatedData = $request->validate([
-            'email' => 'required|email',
-            'phone' => 'required',
-            'address' => 'required',
-        ]);
-
-        Information::create([
-            'email' => $validatedData['email'],
-            'phone' => $validatedData['phone'],
-            'address' => $validatedData['address'],
-        ]);
-
-        return redirect()->back()->with('success', 'Informations ajoutées avec succès.');
-    }
 }

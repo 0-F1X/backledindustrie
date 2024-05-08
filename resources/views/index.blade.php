@@ -420,7 +420,7 @@
 
 
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
-                    
+
                 </div>
             </div>
         </section><!-- End Gallerie Section -->
@@ -542,6 +542,11 @@
                                 <button type="submit" class="btn btn-primary" style="background-color: #FD7E14; border: none;" id="submit-btn">
                                     Envoyer <i class="fas fa-paper-plane"></i>
                                 </button>
+                                @if ($errors->any() && empty($request->input('name')) && empty($request->input('email')) && empty($request->input('message')))
+                                <div class="alert alert-danger">
+                                    Veuillez remplir tous les champs du formulaire.
+                                </div>
+                                @endif
                             </div>
                         </form>
                     </div>
